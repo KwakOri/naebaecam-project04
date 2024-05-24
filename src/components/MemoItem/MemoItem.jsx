@@ -1,12 +1,13 @@
 /* eslint-disable react/prop-types */
-import { getHoursAndMinutes } from "../../utils";
+import { getFormatedDate } from "../../utils";
 import { StDiv } from "./MemoItem.styled";
 
-const MemoItem = ({ body, time }) => {
+const MemoItem = ({ selected, body, time }) => {
+  console.log(selected);
   return (
-    <StDiv>
+    <StDiv selected={selected}>
       <h2>{body}</h2>
-      <p>{getHoursAndMinutes(time)}</p>
+      <p>{getFormatedDate(time)}</p>
     </StDiv>
   );
 };

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const StDiv = styled.div`
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,7 +9,7 @@ const StDiv = styled.div`
   width: 100%;
   height: 56px;
   border-radius: 4px;
-  background-color: #ffe07f;
+  ${(props) => props.selected && `background-color: #ffe07f;`}
   padding: 10px 20px;
   margin-bottom: 10px;
 

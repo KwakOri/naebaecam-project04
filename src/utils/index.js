@@ -1,1 +1,1 @@
-export { getHoursAndMinutes } from "./formatDate";
+export { getFormatedDate } from "./formatDate";

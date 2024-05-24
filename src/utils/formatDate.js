@@ -1,14 +1,19 @@
-const getFormatedDate = (currDate) => {
+const getFormatedDate = (currDate, type = "short") => {
   const _date = new Date(currDate);
   const isAm = _date.getHours() < 13 ? "오전" : "오후";
-  return {
-    shortFormat: `${isAm} ${_date.getHours() % 12}:${_date.getMinutes()}`,
-    fullFormat: `${_date.getFullYear()}년 ${
-      _date.getMonth() + 1
-    }월 ${_date.getDate()}일, ${isAm} ${
-      _date.getHours() % 12
-    }:${_date.getMinutes()}`,
-  };
+  const hours =
+    _date.getHours() % 12 < 10
+      ? "0" + (_date.getHours() % 12)
+      : _date.getHours() % 12;
+  const minutes =
+    _date.getMinutes() < 10 ? "0" + _date.getMinutes() : _date.getMinutes();
+  const year = _date.getFullYear();
+  const month = _date.getMonth() + 1;
+  const date = _date.getDate();
+
+  return type === "short"
+    ? `${isAm} ${hours}:${minutes}`
+    : `${year}년 ${month}월 ${date}일, ${isAm} ${hours}:${minutes}`;
 };
 
 export { getFormatedDate };
