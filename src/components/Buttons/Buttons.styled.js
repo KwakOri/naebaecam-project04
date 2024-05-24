@@ -11,6 +11,7 @@ const StDiv = styled.div`
   border-bottom: 1px solid #e6e6e6;
 
   & button {
+    cursor: pointer;
     font-weight: 500;
     color: #808080;
     font-size: 13px;
