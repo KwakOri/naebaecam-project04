@@ -4,7 +4,6 @@ const StDiv = styled.div`
   display: flex;
   width: 100%;
   max-width: 1020px;
-  min-width: 720px;
   height: 500px;
   border-radius: 10px;
   border: 1px solid #e6e6e6;

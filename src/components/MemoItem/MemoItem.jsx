@@ -7,7 +7,7 @@ const MemoItem = ({ selected, body, time }) => {
   return (
     <StDiv selected={selected}>
       <h2>{body}</h2>
-      <p>{getFormatedDate(time)}</p>
+      <p>{getFormatedDate(time, "short")}</p>
     </StDiv>
   );
 };

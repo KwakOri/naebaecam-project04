@@ -1,4 +1,4 @@
-const getFormatedDate = (currDate, type = "short") => {
+const getFormatedDate = (currDate, type = "full") => {
   const _date = new Date(currDate);
   const isAm = _date.getHours() < 13 ? "오전" : "오후";
   const hours =
