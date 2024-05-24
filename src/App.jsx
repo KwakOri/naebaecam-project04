@@ -1,9 +1,10 @@
 import { GlobalStyle } from "./GlobalStyle";
+import { Board } from "./components/Board";
 function App() {
   return (
     <>
       <GlobalStyle />
-      <h1>hello</h1>
+      <Board />
     </>
   );
 }
