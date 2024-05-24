@@ -28,6 +28,11 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 ol, ul {
 	list-style: none;
@@ -43,6 +48,9 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+li {
+  list-style: none;
 }
 `;
 

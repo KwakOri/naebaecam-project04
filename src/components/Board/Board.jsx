@@ -1,4 +1,5 @@
 import { Buttons } from "../Buttons";
+import { MemoList } from "../MemoList";
 import { StDiv, StLeftDiv } from "./Board.styled";
 
 const Board = () => {
@@ -6,6 +7,7 @@ const Board = () => {
     <StDiv>
       <StLeftDiv>
         <Buttons></Buttons>
+        <MemoList></MemoList>
       </StLeftDiv>
     </StDiv>
   );
