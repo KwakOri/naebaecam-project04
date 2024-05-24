@@ -1,18 +1,23 @@
+import { useDispatch, useSelector } from "react-redux";
+import { addMemo, deleteMemo } from "../../redux/memoSlice";
 import { StDiv } from "./Buttons.styled";
 
 const Buttons = () => {
+  const dispatch = useDispatch();
+  const { currMemoId } = useSelector((state) => state.memo);
+  console.log(currMemoId);
   return (
     <StDiv>
       <button
         onClick={() => {
-          console.log("new!");
+          dispatch(addMemo());
         }}
       >
         새 메모 작성하기
       </button>
       <button
         onClick={() => {
-          console.log("delete!");
+          dispatch(deleteMemo(currMemoId));
         }}
       >
         삭제
